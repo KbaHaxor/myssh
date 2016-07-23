@@ -12,6 +12,7 @@ public class MyDateConverter extends StrutsTypeConverter {
     
     private DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
+    @SuppressWarnings("rawtypes")
     @Override
     public Object convertFromString(Map context, String[] values, Class toClass) {
         if (toClass == Date.class) {
@@ -24,6 +25,7 @@ public class MyDateConverter extends StrutsTypeConverter {
         return null;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public String convertToString(Map context, Object o) {
         if (o instanceof Date) {
