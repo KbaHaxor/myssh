@@ -5,7 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="scripts/jquery-1.7.2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<script src="scripts/jquery-1.7.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $(function() {
         $(".delete").click(function() {
@@ -34,9 +37,9 @@
 
   <h4>Information of All Employees</h4>
 
-  <table border="1" cellpadding="10" cellspacing="0">
+  <table class="table table-striped table-responsive">
     <thead>
-      <tr>
+      <tr class="info">
         <th>ID</th>
         <th>LAST NAME</th>
         <th>EMAIL</th>

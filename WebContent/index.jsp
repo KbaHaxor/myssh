@@ -4,13 +4,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<script src="scripts/jquery-1.7.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-  <p>
-    <a href="emp-list">List All Employees</a>
-  </p>
-  <p>
-    <a href="emp-input">Add New Employee</a>
-  </p>
+<div class="container">
+    <br><br>
+    <a href="emp-list" class="btn btn-primary btn-block">List All Employees</a>
+    <a href="emp-input" class="btn btn-primary btn-block">Add New Employee</a>
+</div>
 </body>
 </html>
