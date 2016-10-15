@@ -16,10 +16,10 @@
     <h2 class="uk-text-muted uk-text-center">Entry Page</h2>
     <div class="uk-grid uk-margin-large-top" data-uk-grid-margin>
         <div class="uk-width-medium-1-2">
-            <a href="emp-list" class="uk-button uk-button-large uk-button-primary uk-align-center"><span class="uk-icon-small uk-icon-users"></span>&nbsp;&nbsp;List All Employees</a>
+            <a href="emp-list" class="uk-button uk-button-large uk-button-primary uk-align-center"><span class="uk-icon-users uk-icon-small"></span>&nbsp;&nbsp;List All Employees</a>
         </div>
         <div class="uk-width-medium-1-2">
-            <a href="emp-input" class="uk-button uk-button-large uk-button-primary uk-align-center"><span class="uk-icon-small uk-icon-user"></span>&nbsp;&nbsp;Add New Employee</a>
+            <a href="emp-input" class="uk-button uk-button-large uk-button-primary uk-align-center"><span class="uk-icon-user uk-icon-small"></span>&nbsp;&nbsp;Add New Employee</a>
         </div>
     </div>
 </div>
