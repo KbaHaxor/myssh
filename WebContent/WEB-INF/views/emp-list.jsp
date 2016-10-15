@@ -61,8 +61,8 @@
             <td><s:date name="birth" format="yyyy-MM-dd" /></td>
             <td><s:date name="createTime" format="yyyy-MM-dd hh:mm:ss" /></td>
             <td>${department.departmentName}</td>
-            <td><a href="emp-input?id=${id}">edit</a></td>
-            <td><a href="emp-delete?id=${id}" class="delete">delete</a><input type="hidden" value="${lastName }" /></td>
+            <td><a href="emp-input?id=${id}" class="uk-button uk-button-small">Edit</a></td>
+            <td><a href="emp-delete?id=${id}" class="delete uk-button uk-button-small uk-button-danger">Delete</a><input type="hidden" value="${lastName }" /></td>
           </tr>
         </s:iterator>
       </tbody>

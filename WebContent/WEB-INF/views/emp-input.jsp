@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="scripts/jquery-1.7.2.js"></script>
-<script type="text/javascript">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add New Employee</title>
+<link rel="stylesheet" href="assets/uikit/css/uikit.almost-flat.min.css">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/uikit/js/uikit.min.js"></script>
+<script>
     $(function() {
         $(":input[name=lastName]").change(function() {
             var $this = $(this);
@@ -40,7 +43,7 @@
 </head>
 <body>
 
-  <h4>Employee Editing Page</h4>
+  <h2 class="uk-text-muted uk-text-center uk-margin-top">Employee Editing Page</h2>
 
   <s:form action="emp-save" method="post">
     <s:if test="id != null">
@@ -62,7 +65,9 @@
     <s:submit></s:submit>
   </s:form>
 
-  <s:debug></s:debug>
+  <div class="uk-container uk-container-center">
+    <a href="index.jsp" class="uk-button uk-button-primary uk-button-large uk-width-1-3 uk-align-center"><span class="uk-icon-home uk-icon-small"></span>&nbsp;&nbsp;Back to Entry Page</a>
+  </div>
 
 </body>
 </html>
