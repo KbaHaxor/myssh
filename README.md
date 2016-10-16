@@ -1,4 +1,4 @@
-﻿# A Demonstrative Java Web Application Utilizing SSH Framework
+# A Demonstrative Java Web Application Utilizing Struts2, Spring, Hibernate Framework
 
 ## Introduction
 This is a simple demonstrative Java web application intended to be used as a personnel information management system. Popular Java frameworks, such as Spring, Struts, and Hibernate is used. Spring is used both as a IOC container which manages Hibernate's `SessionFactory` and various instances used by Struts, including Action classes, DAO classes, and classes that serve as business models, and as a AOP framework for Hibernate's transaction management. Struts' tag and OGNL combined with JSP technology is utilized for front end rendering. In Struts, which itself is a huge MVC (Model-View-Controller) web framework, Action class acts as a controller to direct requests and feed them back with the right responses. The business logic code and DAO code is arrange into two separate packages. Hibernate is used as a persistence framework which is responsible for both interacting with backend database and actual transaction management. In order to understand how this application works, one needs to have the following prerequisites besides the basic knowledge of Java programming:
@@ -11,7 +11,21 @@ This is a simple demonstrative Java web application intended to be used as a per
 * Knowing how to implement simple DOM operation by jQuery library and how to implement AJAX interaction with the assist of jQuery.
 
 ## Screenshots
-TO BE DONE
+The entry page has two buttons on it. The first leads user to the page that lists all employee's information. The second one is used to add new employee information.
+
+![Entry Page](./images/myssh-img_1.png)
+
+The employee information list page lists all the record of employees on it. User can edit or delete record of any employee listed here. The deletion operation utilizes AJAX technology. So user does not have to refresh the page after deletion.
+
+![Employee Information List Page](./images/myssh-img_2.png)
+
+User can edit/update information of an employee. The name of the employee is not allowed to be changed.
+
+![Employee Information Editing Page](./images/myssh-img_3.png)
+
+This page is intended to add new employee's information. User can use a date picker to add well-formatted date for employee's birthday field.
+
+![Page for Adding New Employee](./images/myssh-img_4.png)
 
 ## Involved technologies
 * Front end:
@@ -19,6 +33,7 @@ TO BE DONE
     - Struts' tags and OGNL
     - JavaScript (jQuery specifically)
     - AJAX
+    - [UIkit Front-end Framework](https://getuikit.com/)
 * Middle tier
     - Spring IOC (for instance management and dependency injection)
     - Spring AOP (for transaction management for all methods that that serve as business logic)
