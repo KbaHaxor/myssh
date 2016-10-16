@@ -35,15 +35,15 @@
                 
                 $.post(url, args, function(data) {
                     if (data == "0") {
-                        $this.after("&nbsp;<font color='green'>该用户名可用</font>");
+                        $this.after("&nbsp;<font color='green'>Name Available</font>");
                     } else if (data == "1") {
-                        $this.after("&nbsp;<font color='red'>该用户名不可用!</font>");
+                        $this.after("&nbsp;<font color='red'>Name Unavailable</font>");
                     } else {
                         alert("Server Error!");
                     }
                 });
             } else {
-                alert("LastName 不能为空");
+                alert("Name cannot be empty!");
                 $(this).val("");
                 $this.focus();
             }
@@ -61,7 +61,7 @@
         <div class="uk-form-row">
           <s:if test="id != null">
             <s:textfield name="lastName" label="LAST NAME" disabled="true"></s:textfield>
-            <%-- 不要忘了把 edit 带过来的 id 带过去，否则在 Action 类里面永远是创建新记录，而非修改记录 --%>
+            <%-- Don't forget to bring the "id" on submission. Or a new record will be created. Not record modification! --%>
             <s:hidden name="id"></s:hidden>
           </s:if>
           <s:else>
@@ -74,16 +74,17 @@
         </div>
         
         <div class="uk-form-row">
+          <%-- Date converter of Struts2 needs to be configured. The converter converts between string and date type. --%>
           <s:textfield name="birth" label="BIRTH" placeholder="Birthday" data-uk-datepicker="{format:'YYYY-MM-DD'}"></s:textfield>
         </div>
-        <%-- 这里整理日期格式需要配置 Struts2 的日期转换器，即字符串和日期类型的相互转换 --%>
     
         <div class="uk-form-row">
           <label>Departments: </label>
+          <%-- listKey -> value (html) --%>
+          <%-- listValue -> the corresponding presented center (html) --%>
           <s:select list="#request.departments" listKey="id" listValue="departmentName" name="department.id" label="Departments"></s:select>
           &nbsp;&nbsp;&nbsp;<button type="submit" class="uk-button">Submit</button>
         </div>
-        <%-- listKey 对应具体生成的 HTML 属性里的 value，listValue 对应显示的内容，name 对应表单提交的属性名 --%>
     </fieldset>
   </s:form>
 
